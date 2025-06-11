@@ -2,8 +2,8 @@ from flask import Flask, request, jsonify
 
 import pdfplumber
 
-from utils import clean_and_tokenize
-from utils import extract_keywords
+from utils import match_keywords
+from utils import extract_keywords_spacy
 from utils import get_resume_feedback
 
 app = Flask(__name__)
@@ -24,27 +24,18 @@ def analyze():
         for page in pdf.pages:
             job_text += page.extract_text()
 
-    resume_words = clean_and_tokenize(resume_text)
-    keywords = extract_keywords(job_text)
-    matched_keywords = []
-    missing_keywords = []
+
+    keywords = extract_keywords_spacy(job_text)
+    matched_keywords, missing_keywords = match_keywords(resume_text, keywords)
+
     total = len(keywords)
     total_matched = len(matched_keywords)
-    score = 0
-
-    for keyword in keywords:
-        if keyword in resume_words:
-            matched_keywords.append(keyword)
-            total_matched += 1
-        else:
-            missing_keywords.append(keyword)
-
-    score += total_matched / total * 100
+    score = (total_matched / total) * 100 if total > 0 else 0
 
     feedback = get_resume_feedback(resume_text, job_text)
 
     return jsonify({
-        'match_score': str(score) + '%', 
+        'match_score': f"{score:.2f}%",
         'matched_keywords': matched_keywords,
         'missing_keywords': missing_keywords,
         'ai_feedback': feedback
