@@ -1,6 +1,6 @@
 # FitForHire
 
-FitForHire is an AI-powered job search assistant that helps job seekers optimize their resumes by matching them with job descriptions. It provides personalized feedback on how to improve resumes, highlights missing skills, and helps track job applications — all in one user-friendly platform.
+FitForHire is an AI-powered job application assistant that helps job seekers optimize their resumes by matching it with a job description. It provides personalized feedback on how to improve the resume, highlights missing skills, and helps track job applications — all in one user-friendly platform.
 
 ---
 
