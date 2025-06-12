@@ -7,7 +7,7 @@ FitForHire is an AI-powered job search assistant that helps job seekers optimize
 ## Features
 
 - **AI Resume Feedback**  
-  Upload your resume and job description to get detailed, AI-generated suggestions to better tailor your resume for each job.
+  Upload your resume and job description in a pdf to get detailed, AI-generated suggestions to better tailor your resume for each job.
   
 - **Keyword Extraction & Matching**  
   Uses spaCy NLP to extract keywords and skills from job descriptions and compare them against your resume content.
@@ -27,8 +27,7 @@ FitForHire is an AI-powered job search assistant that helps job seekers optimize
 
 - **Programming Languages & Frameworks:**  
   - Python (Flask for backend API)  
-  - JavaScript (React.js for frontend)  
-  - TailwindCSS for styling
+  - JavaScript (React.js for frontend)
 
 - **AI & NLP:**  
   - OpenAI API (Azure OpenAI client)  
@@ -41,12 +40,12 @@ FitForHire is an AI-powered job search assistant that helps job seekers optimize
   - Visual Studio Code (VSCode)
 
 ---
+## Screenshots
 
-## Screenshot
-
-*Add a screenshot of the application interface here to showcase your UI.*
-
-![FitForHire Screenshot](path/to/your-screenshot.png)
+![FitForHire Screenshot 1](Screenshots/FFH_Screenshot_1.png)
+![FitForHire Screenshot 2](Screenshots/FFH_Screenshot_2.png)
+![FitForHire Screenshot 3](Screenshots/FFH_Screenshot_3.png)
+![FitForHire Screenshot 4](Screenshots/FFH_Screenshot_4.png)
 
 ---
 
@@ -83,8 +82,7 @@ FitForHire is an AI-powered job search assistant that helps job seekers optimize
 3. **Create environment variables file**  
    In the `backend` directory, create a `.env` file and add your API keys:
     ```
-    GITHUB_TOKEN=your_github_token_here
-    OPENAI_API_KEY=your_openai_api_key_here
+    GITHUB_TOKEN=your_openai_api_key_here
     ```
 
 4. **Set up frontend**
@@ -99,7 +97,7 @@ FitForHire is an AI-powered job search assistant that helps job seekers optimize
 - **Start backend server** (in one terminal)
     ```bash
     cd backend
-    venv\Scripts\activate  # or source venv/bin/activate
+    venv\Scripts\activate
     python app.py
     ```
 
@@ -115,8 +113,8 @@ FitForHire is an AI-powered job search assistant that helps job seekers optimize
 
 ## Usage
 
-1. Upload your resume (PDF supported) or paste text.  
-2. Paste or upload a job description.  
+1. Upload your resume (PDF supported).  
+2. Upload a job description.  
 3. Get detailed AI feedback to improve your resume tailored to the job.  
 4. Track your job applications and update statuses in the application tracker.
 
