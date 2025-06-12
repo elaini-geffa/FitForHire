@@ -19,7 +19,7 @@ FitForHire is an AI-powered job application assistant that helps job seekers opt
   Supports PDF resume uploads and parsing using `pdfplumber`.
   
 - **User-Friendly GUI**  
-  Built with React.js and TailwindCSS for an intuitive and responsive front-end experience.
+  Built with React.js, HTML, and CSS for an intuitive and responsive front-end experience.
 
 ---
 
